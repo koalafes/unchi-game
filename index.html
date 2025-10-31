@@ -9,6 +9,38 @@
   </head>
   <body>
     <main class="wrap">
+      <section id="lobby" class="lobby" aria-label="Lobby" style="display:none">
+        <div class="lobby-row">
+          <label>名前 <input id="nameInput" maxlength="16" placeholder="Player" /></label>
+        </div>
+        <div class="lobby-row">
+          <button id="hostBtn">部屋を立てる</button>
+          <span>または</span>
+          <label>ルームID <input id="roomInput" maxlength="6" size="8" placeholder="ABC123" /></label>
+          <button id="joinBtn">入室</button>
+        </div>
+        <div id="roomPanel" class="room-panel" style="display:none">
+          <div>ルームID: <strong id="roomCode">-</strong></div>
+          <div>ホスト設定: 
+            <label>難易度 
+              <select id="difficulty">
+                <option value="easy">易</option>
+                <option value="normal" selected>標準</option>
+                <option value="hard">難</option>
+              </select>
+            </label>
+            <label><input type="checkbox" id="collisionOpt" /> プレイヤー同士の衝突</label>
+            <button id="startRoundBtn">開始</button>
+          </div>
+          <div>
+            <label><input type="checkbox" id="readyToggle" /> 準備OK</label>
+          </div>
+          <div>
+            参加者:
+            <ul id="players" class="players"></ul>
+          </div>
+        </div>
+      </section>
       <h1 class="title">うんちダッシュ 💩</h1>
       <div class="game-shell">
         <canvas id="game" width="480" height="720" aria-label="Game canvas"></canvas>
@@ -29,4 +61,3 @@
     <script src="game.js"></script>
   </body>
   </html>
-
