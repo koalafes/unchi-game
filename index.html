@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>うんちダッシュ 💩</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1 class="title">うんちダッシュ 💩</h1>
+      <div class="game-shell">
+        <canvas id="game" width="480" height="720" aria-label="Game canvas"></canvas>
+        <div id="hud" class="hud">
+          <div class="score" id="score">0</div>
+          <div class="message" id="message"></div>
+          <div class="help" id="help">
+            ←/A と →/D で移動 ・ スペースで開始/再開 ・ Pで一時停止
+          </div>
+        </div>
+        <div class="touch">
+          <button id="leftBtn" aria-label="左に移動">◀</button>
+          <button id="startBtn" aria-label="スタート">▶</button>
+          <button id="rightBtn" aria-label="右に移動">▶</button>
+        </div>
+      </div>
+    </main>
+    <script src="game.js"></script>
+  </body>
+  </html>
+
